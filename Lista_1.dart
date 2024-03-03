@@ -1,60 +1,62 @@
 void add(int a, int b) {
-String title = "Soma dos numeros:";
-int result = a + b;
-print("$title $result");
+  String title = "Soma dos numeros:";
+  int result = a + b;
+  print("$title $result");
 }
 
 void verifyNumber(int number) {
-String title = "Verificação de numero:";
-if (number < 10) {
-return print("$title $number é menor que 10");
-}
-if (number > 10) {
-return print("$title $number é maior que 10");
-}
+  String title = "Verificação de numero:";
+  if (number < 10) {
+    return print("$title $number é menor que 10");
+  }
+  if (number > 10) {
+    return print("$title $number é maior que 10");
+  }
 
-print("$title $number é igual a 10");
+  print("$title $number é igual a 10");
 }
 
 void oddOrEven(int number) {
-String title = "Numero par ou impar:";
-if (number % 2 == 0) {
-return print("$title O numero $number é par");
-}
-print("$title O numero $number é impar");
+  String title = "Numero par ou impar:";
+  if (number % 2 == 0) {
+    return print("$title O numero $number é par");
+  }
+  print("$title O numero $number é impar");
 }
 
 void forNumber(int number) {
-String title = "For de numeros:";
+  String title = "For de numeros:";
 
-List numbers = [];
-for (int i = 1; i <= number; i++) {
-numbers.add(i);
+  List numbers = [];
+  for (int i = 1; i <= number; i++) {
+    numbers.add(i);
+  }
+
+  String numbersFormatted = numbers.join(" ");
+  print("$title $numbersFormatted");
 }
 
-String numbersFormatted = numbers.join(" ");
-print("$title $numbersFormatted");
+void biggerSmaller(
+    int number1, int number2, int number3, int number4, int number5) {
+  String title = "Numero maior e menor:";
+  List numbers = [number1, number2, number3, number4, number5];
+  numbers.sort();
+  print(
+      "$title \n- Maior numero: ${numbers.last} \n- Menor numero: ${numbers.first}");
 }
 
-void biggerSmaller(int number1, int number2, int number3, int number4, int number5) {
-String title = "Numero maior e menor:";
-List numbers = [number1, number2, number3, number4, number5];
-numbers.sort();
-print("$title \n- Maior numero: ${numbers.last} \n- Menor numero: ${numbers.first}");
-}
-
-void concatString (String a, String b) {
-String title = "Concatenação de strings:";
-String result = a + " " + b;
-print("$title $result ");
+void concatString(String a, String b) {
+  String title = "Concatenação de strings:";
+  String result = a + " " + b;
+  print("$title $result ");
 }
 
 void between10and20(int number) {
-String title = "Entre 10 e 20:";
-if (number >= 10 && number <= 20) {
-return print("$title $number é entre 10 e 20");
-}
-print("$title $number não é entre 10 e 20");
+  String title = "Entre 10 e 20:";
+  if (number >= 10 && number <= 20) {
+    return print("$title $number é entre 10 e 20");
+  }
+  print("$title $number não é entre 10 e 20");
 }
 
 void daysOfWeek(int number) {
@@ -100,7 +102,7 @@ void equalNumber(int first_number, int second_number) {
   String title = "Numeros iguais:";
   if (first_number == second_number) {
     return print("$title $first_number e $second_number são iguais");
-  }  
+  }
   print("$title $first_number e $second_number não são iguais");
 }
 
@@ -135,4 +137,3 @@ void main() {
   // Numeros iguais
   equalNumber(10, 20);
 }
-
