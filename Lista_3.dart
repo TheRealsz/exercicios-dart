@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'dart:convert';
 
-
 void imprimirMapa(Map<String, String> mapa) {
   String title = "Mapa:";
   mapa.forEach((key, value) => print("$title $key -> $value"));
@@ -28,16 +27,17 @@ void filtrarMapa(Map<String, int> mapa) {
   });
 }
 
-void lerJson(){
+void lerJson() {
   String title = "Alunos:";
   File jsonFile = File('mockData.json');
+  // Lendo o arquivo json como string e tranformando em um mapa (objeto) com o jsonDecode
   Map<String, dynamic> studentsData = jsonDecode(jsonFile.readAsStringSync());
   List<dynamic> students = studentsData['alunos'];
   print("$title");
-  students.forEach((element) { 
-    print("Nome: ${element['nome']}, Idade: ${element['idade']}, Curso: ${element['curso']}");
+  students.forEach((element) {
+    print(
+        "Nome: ${element['nome']}, Idade: ${element['idade']}, Curso: ${element['curso']}");
   });
-
 }
 
 void main() {
